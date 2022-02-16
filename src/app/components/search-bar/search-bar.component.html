@@ -1,0 +1,17 @@
+<form
+  class="search-form input-group w-auto my-auto d-none d-sm-flex"
+  #form="ngForm"
+  (ngSubmit)="onSubmit(form)"
+>
+  <div class="search">
+    <input
+      autocomplete="off"
+      type="search"
+      name="search"
+      ngModel
+      placeholder="Rechercher des NFTs, Salons et Artistes"
+      style="min-width: 800px"
+    />
+    <i class="fas fa-search"></i>
+  </div>
+</form>
