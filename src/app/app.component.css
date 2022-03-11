@@ -12,6 +12,7 @@
   box-sizing: border-box;
 }
 body {
+  padding-bottom: 1em;
   background-color: #090e15;
 }
 
@@ -241,7 +242,8 @@ section:not(.heading) {
 }
 
 .right-projet img {
-  width: 350px;
+  width: 650px;
+  border-radius: 24px;
   margin: auto;
 }
 
@@ -285,7 +287,7 @@ section:not(.heading) {
 }
 
 .pack-img {
-  background-color: #2f394d;
+  background-color: #ffffff;
   border-radius: 24px;
   margin-bottom: 1em;
 }

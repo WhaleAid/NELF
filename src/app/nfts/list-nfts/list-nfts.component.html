@@ -1,58 +1,37 @@
-<section  class="nft-section">
-    <h1 id="nft">NFTs</h1>
-    <form class="search">
-      <input
-        type="text"
-        name="search"
-        placeholder="&#x26B2;  Recherche NFTs"
-      />
-    </form>
-    <div class="nfts" id="nfts">
-      <button class="slider-button left" id="slider-button-left"><</button>
-      <button class="slider-button right" id="slider-button-right">></button>
+<section class="nft-section">
+  <h1 id="nft">NFTs</h1>
+  <!-- <form class="search">
+    <input type="text" name="search" placeholder="&#x26B2;  Recherche NFTs" />
+  </form> -->
+  <div class="nfts" id="nfts">
+    <button class="slider-button left" id="slider-button-left"><</button>
+    <button class="slider-button right" id="slider-button-right">></button>
 
-      <div class="nft" *ngFor="let nft of nfts;">
-        <img class="nft-image" src="{{nft.metadata.image}}" alt="">
-          <p> {{nft.chain}} </p>
-          <p> {{nft.metadata.name}}</p>
-          <p> {{nft.metadata.description}}</p>
+    <div
+      *ngFor="let nft of nfts"
+      ng-app
+      init="item = {nft.metadata.image_url: '', nft.metadata.id: '', nft.metadata.generation: '', nft.metadata.owner.address: ''}"
+    >
+      <div *ngIf="nft.metadata.image_url" class="nft">
+        <div *ngIf="nft.metadata.id" class="id">{{ nft.metadata.id }}</div>
+        <img src="{{ nft.metadata.image_url }}" alt="" />
+        <p>{{ nft.metadata.name }}</p>
+        <p *ngIf="nft.metadata.generation">
+          Generation : {{ nft.metadata.generation }}
+        </p>
+        
+      </div>
+
+      <div *ngIf="nft.metadata.owner.address" class="owner">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </div>
+
+      <div *ngIf="nft.metadata.image_url" class="owner-panel" (mouseover)="showowner=true" (mouseout)="showowner=false">
+        <span *ngIf="!showowner">Hide</span>
+        <span *ngIf="showowner">Show</span>
       </div>
 
 
-      <!-- <div class="nft">
-        <img src="../assets/images/nelf_logo.png" alt="" />
-        <p>NFT test</p>
-        <p>artist test</p>
-      </div>
-      <div class="nft">
-        <img src="../assets/images/nelf_logo.png" alt="" />
-        <p>NFT test</p>
-        <p>artist test</p>
-      </div>
-      <div class="nft">
-        <img src="../assets/images/nelf_logo.png" alt="" />
-        <p>NFT test</p>
-        <p>artist test</p>
-      </div>
-      <div class="nft">
-        <img src="../assets/images/nelf_logo.png" alt="" />
-        <p>NFT test</p>
-        <p>artist test</p>
-      </div>
-      <div class="nft">
-        <img src="../assets/images/nelf_logo.png" alt="" />
-        <p>NFT test</p>
-        <p>artist test</p>
-      </div>
-      <div class="nft">
-        <img src="../assets/images/nelf_logo.png" alt="" />
-        <p>NFT test</p>
-        <p>artist test</p>
-      </div>
-      <div class="nft">
-        <img src="../assets/images/nelf_logo.png" alt="" />
-        <p>NFT test</p>
-        <p>artist test</p>
-      </div> --> -->
     </div>
-  </section>
+  </div>
+</section>
