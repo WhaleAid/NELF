@@ -4,150 +4,203 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-    <video autoplay muted loop id="myVideo">
-      <source
-        src="../assets/Videos/MM000587____ABSTRACT_00587___1080p___A020_C079_0224I3_001.mp4"
-        type="video/mp4"
-      />
-    </video>
-    <!-- Navbar-->
-    <nav id="navbar" class="navbar">
-      <div class="container-fluid justify-content-between">
-        <!-- Left elements -->
-        <div class="d-flex">
-          <!-- Brand -->
-          <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-            <img
-              class="logo"
-              src="../assets/images/nelf_logo.png"
-              height="20"
-              alt="NELF Logo"
-              loading="lazy"
-              style="margin-top: 2px"
-            />
-          </a>
-          <!-- Search form -->
-          <app-search-bar></app-search-bar>
-        </div>
-        <!-- Left elements -->
-        <!-- Right elements -->
+    <section class="heading">
+      <video autoplay loop class="back-video" muted plays-inline>
+        <source src="../assets/Videos/bg.mov" type="video/mp4" />
+      </video>
 
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item me-3 me-lg-1">
-            <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-              <button class="signin">Connexion</button>
-              <button class="signup">Inscription</button>
+      <!-- Navbar-->
+      <nav id="navbar" class="navbar">
+        <div class="container-fluid justify-content-between">
+          <!-- Left elements -->
+          <div class="d-flex">
+            <!-- Brand -->
+            <a
+              class="navbar-brand me-2 mb-1 d-flex align-items-center"
+              href="#"
+            >
+              <img
+                class="logo"
+                src="../assets/images/nelf_logo.png"
+                height="20"
+                alt="NELF Logo"
+                loading="lazy"
+                style="margin-top: 2px"
+              />
             </a>
+            <!-- Search form -->
+            <!--<form
+            class="search-form input-group w-auto my-auto d-none d-sm-flex">
+            <div class="search">
+              <input
+                autocomplete="off"
+                type="search"
+                name="search"
+                ngModel
+                placeholder="Rechercher des NFTs, Salons et Artistes"
+                style="min-width: 800px"
+              />
+              <i class="fas fa-search"></i>
+            </div>
+          </form>-->
+          </div>
+          <!-- Left elements -->
+          <!-- Right elements -->
+
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item me-3 me-lg-1">
+              <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+                <a href="#accueil" class="nav-button">Accueil</a>
+                <a href="#nft" class="nav-button">NFTs</a>
+                <a href="#projet" class="nav-button">projet</a>
+                <a href="#roadmap" class="nav-button">roadmap</a>
+                <a href="#contact" class="nav-button">Contact</a>
+              </a>
+            </li>
+          </ul>
+          <!-- Right elements -->
+        </div>
+      </nav>
+      <!-- Navbar -->
+      <div class="content">
+        <h1>NELF</h1>
+        <h4>lorem ipsum dolor sit amet consectetuer adipiscing elit</h4>
+        <a href="#projet" class="discover-btn">En savoir plus</a>
+      </div>
+    </section>
+
+    <app-list-nfts></app-list-nfts>
+
+    <section id="projet" class="projet">
+      <h1>Business Plan</h1>
+      <div class="projet-container">
+        <div class="left-projet">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </p>
+        </div>
+        <div class="right-projet">
+          <img src="../assets/images/nelf_logo.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="abonnement">
+      <h1>Packs</h1>
+      <div class="list-packs d-flex">
+        <div class="pack">
+          <div class="pack-img">
+            <img src="../assets/images/nelf_logo.png" alt="" />
+          </div>
+          <h4>Pack Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            temporibus officiis ab ullam a natus perferendis iusto minus
+            corporis culpa, porro iste vero ipsa aliquam inventore repudiandae
+            placeat numquam molestias.
+          </p>
+        </div>
+        <div class="pack">
+          <div class="pack-img">
+            <img src="../assets/images/nelf_logo.png" alt="" />
+          </div>
+          <h4>Pack Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            temporibus officiis ab ullam a natus perferendis iusto minus
+            corporis culpa, porro iste vero ipsa aliquam inventore repudiandae
+            placeat numquam molestias.
+          </p>
+        </div>
+        <div class="pack">
+          <div class="pack-img">
+            <img src="../assets/images/nelf_logo.png" alt="" />
+          </div>
+          <h4>Pack Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            temporibus officiis ab ullam a natus perferendis iusto minus
+            corporis culpa, porro iste vero ipsa aliquam inventore repudiandae
+            placeat numquam molestias.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="roadmap">
+      <h1>RoadMap</h1>
+
+      <div class="roadmap-timeline">
+        <ul class="timeline">
+          <li class="event" data-date="PHASE #1">
+            <h3>MARKETPLACE</h3>
+            <p>
+              Get here on time, it's first come first serve. Be late, get turned
+              away.
+            </p>
+          </li>
+          <li class="event" data-date="PHASE #2">
+            <h3>COLLECTIONS NELF</h3>
+            <p>
+              Get ready for an exciting event, this will kick off in amazing
+              fashion with MOP & Busta Rhymes as an opening show.
+            </p>
+          </li>
+          <li class="event" data-date="PHASE #3">
+            <h3>NFTs sur XRPL</h3>
+            <p>
+              This is where it all goes down. You will compete head to head with
+              your friends and rivals. Get ready!
+            </p>
           </li>
         </ul>
-        <!-- Right elements -->
       </div>
-    </nav>
-    <!-- Navbar -->
-    <div class="main">
-      <div class="salons-container">
-        <div class="salons">
-          <ul>
-            <h4>Salons gold</h4>
-            <li>
-              <div class="salon">
-                <img
-                  src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/e/0/8/e086e3cef6_50184903_bored-ape.jpg"
-                />
-                <div>
-                  <p class="salon-name">Salon 1 test</p>
-                  <p class="salon-time">23:34:32 restants</p>
-                </div>
-              </div>
-              <div class="salon">
-                <img
-                  src="https://static01.nyt.com/images/2021/03/12/arts/11nft-auction-cryptopunks-print/11nft-auction-cryptopunks-print-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
-                />
-                <div>
-                  <p class="salon-name">Salon 2 test</p>
-                  <p class="salon-time">23:34:32 restants</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="salons">
-          <ul>
-            <h4>Salons populaires</h4>
-            <li>
-              <div class="salon">
-                <img
-                  src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/e/0/8/e086e3cef6_50184903_bored-ape.jpg"
-                />
-                <div>
-                  <p class="salon-name">Salon 1 test</p>
-                  <p class="salon-time">23:34:32 restants</p>
-                </div>
-              </div>
-              <div class="salon">
-                <img
-                  src="https://static01.nyt.com/images/2021/03/12/arts/11nft-auction-cryptopunks-print/11nft-auction-cryptopunks-print-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
-                />
-                <div>
-                  <p class="salon-name">Salon 2 test</p>
-                  <p class="salon-time">23:34:32 restants</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="content">
-        <div class="evenementSpecialeDiv">
-          <div class="specialevent">
-            <h1>
-              BIENVENUE À <br />
-              NELF
-            </h1>
-            <button type="button" class="eventbutton btn btn-warning">
-              Visiter les salons <i class="fas fa-arrow-right"></i>
-            </button>
+    </section>
+    <section id="xrp" class="xrp">
+      <h1>XRP</h1>
+      <div class="xrp-wrapper">
+        <div class="xrp-desc">
+          <div class="pack-img">
+            <img src="../assets/images/xrplogo.png" alt="" />
           </div>
+          <h4>XRP Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            temporibus officiis ab ullam a natus perferendis iusto minus
+            corporis culpa, porro iste vero ipsa aliquam inventore repudiandae
+            placeat numquam molestias.
+          </p>
+          <h4>XRP Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            temporibus officiis ab ullam a natus perferendis iusto minus
+            corporis culpa, porro iste vero ipsa aliquam inventore repudiandae
+            placeat numquam molestias.
+          </p>
         </div>
-        <div class="nfts">
-          <div class="nfts-title">
-            <h4>NFTs populaires</h4>
-            <i class="fire-icon fas fa-fire"></i>
-          </div>
-          
-          <div class="nft-list">
-            <div class="nft">
-              <img
-                src="https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31"
-              />
-              <p>NFT title</p>
-              <p>NFT owner</p>
-            </div>
-            <div class="nft">
-              <img
-                src="https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31"
-              />
-              <p>NFT title</p>
-              <p>NFT owner</p>
-            </div>
-            <div class="nft">
-              <img
-                src="https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31"
-              />
-              <p>NFT title</p>
-              <p>NFT owner</p>
-            </div>
-            <div class="nft">
-              <img
-                src="https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31"
-              />
-              <p>NFT title</p>
-              <p>NFT owner</p>
-            </div>
+        <div class="xrp-container">
+          <div class="xrp-chart">
+            <iframe
+              src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=619&pref_coin_id=1506"
+              width="100%"
+              height="536px"
+              scrolling="auto"
+              marginwidth="0"
+              marginheight="0"
+              frameborder="0"
+              border="0"
+              style="border: 0; margin: 0; padding: 0; line-height: 14px"
+            ></iframe>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <app-contact></app-contact>
+    <app-footer></app-footer>
     <script>
       window.onscroll = function () {
         myFunction();

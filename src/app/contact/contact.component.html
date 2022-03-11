@@ -1,0 +1,25 @@
+<section class="contact">
+  <h1>Contact</h1>
+
+  <form class="form" (ngSubmit)="submitForm()">
+    <div class="field">
+      <input type="text" name="nom" class="form-input" placeholder="Nom" [(ngModel)]="nom"/>
+    </div>
+
+    <div class="field">
+      <input type="email" name="email" class="form-input" placeholder="Email" [(ngModel)]="email" />
+    </div>
+
+    <div class="field">
+      <textarea
+        name="message"
+        class="form-textarea"
+        placeholder="Votre Message"
+        [(ngModel)]="message"
+      ></textarea>
+    </div>
+    <div class="field">
+      <button type="submit" class="form-btn">Envoyer</button>
+    </div>
+  </form>
+</section>

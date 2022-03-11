@@ -1,4 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpHeaders,
+  HttpParams,
+} from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -12,8 +16,15 @@ export class AppComponent {
   }
 
   loadPosts() {
-    this.http.get('https://api.nftport.xyz/v0/nfts').subscribe((response) => {
-      alert(JSON.stringify(response));
+    const httpHeaders = new HttpHeaders({
+      'content-type': 'application/json',
+      Authorization: '70840d43-e1d1-4bc7-9ba0-9abf62ac0667',
+    });
+
+    return this.http.get('https://api.nftport.xyz/v0/nfts', {
+      headers: {
+        'Authorization': '70840d43-e1d1-4bc7-9ba0-9abf62ac0667'
+      },
     });
   }
 }

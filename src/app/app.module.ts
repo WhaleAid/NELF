@@ -6,17 +6,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ContactComponent } from './contact/contact.component';
+import { ListNftsComponent } from './nfts/list-nfts/list-nfts.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent,
+    ContactComponent,
+    ListNftsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
+    FontAwesomeModule,
     RouterModule.forRoot([]),
     HttpClientModule,
   ],
