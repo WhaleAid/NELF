@@ -1,0 +1,64 @@
+section {
+  height: auto;
+  width: 100%;
+  padding: 0;
+  position: relative;
+  margin-top: 8em;
+  padding-bottom: 5em;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 1.5em;
+  color: white;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.form {
+  position: relative;
+  width: 60%;
+  margin: auto;
+}
+
+.field {
+  width: 80%;
+  margin: auto auto 2em auto;
+  min-height: 3em;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(red, green, blue, 0);
+}
+
+.form-input, .form-textarea {
+    width: 700px;
+    padding-left: 2em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(255, 187, 0);
+    border-radius: 24px;
+}
+
+.form-textarea {
+    padding-top: 1em;
+    min-height: 150px;
+    resize: none;
+}
+
+.form-btn {
+    padding: .5em;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    color: white;
+    width: 150px;
+    margin: auto;
+}
+
+.form-btn:hover{
+    background-color: rgb(255, 187, 0);
+    border: 1px solid rgb(255, 187, 0);
+    color: black;
+}
