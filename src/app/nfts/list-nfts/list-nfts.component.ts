@@ -29,4 +29,8 @@ export class ListNftsComponent implements OnInit {
       this.nfts = response.nfts;
     });
   }
+
+  searchNfts(){
+    //recherche des nfts
+  }
 }

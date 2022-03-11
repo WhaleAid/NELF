@@ -1,11 +1,11 @@
 <section class="nft-section">
   <h1 id="nft">NFTs</h1>
+  <h3>Série NFT populaire</h3>
   <!-- <form class="search">
     <input type="text" name="search" placeholder="&#x26B2;  Recherche NFTs" />
   </form> -->
   <div class="nfts" id="nfts">
-    <button class="slider-button left" id="slider-button-left"><</button>
-    <button class="slider-button right" id="slider-button-right">></button>
+    
 
     <div
       *ngFor="let nft of nfts"
@@ -19,19 +19,13 @@
         <p *ngIf="nft.metadata.generation">
           Generation : {{ nft.metadata.generation }}
         </p>
-        
+        <div class="user">
+          <div *ngIf="nft.metadata.owner.address" class="owner">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+          <p class="address">{{ nft.metadata.owner.address }}</p>
+        </div>
       </div>
-
-      <div *ngIf="nft.metadata.owner.address" class="owner">
-        <i class="fa fa-user" aria-hidden="true"></i>
-      </div>
-
-      <div *ngIf="nft.metadata.image_url" class="owner-panel" (mouseover)="showowner=true" (mouseout)="showowner=false">
-        <span *ngIf="!showowner">Hide</span>
-        <span *ngIf="showowner">Show</span>
-      </div>
-
-
     </div>
   </div>
 </section>

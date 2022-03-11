@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';  
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     RouterModule.forRoot([]),
     HttpClientModule,
